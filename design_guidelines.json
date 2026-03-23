@@ -1,0 +1,139 @@
+{
+  "project_name": "ORA Developments PEI",
+  "theme": "dark",
+  "archetype": "The Performance Pro (Industrial/Tech Hybrid)",
+  "typography": {
+    "headings": "Chivo",
+    "body": "IBM Plex Sans",
+    "accent": "Barlow Condensed",
+    "rules": [
+      "Use Chivo for major headings with tracking-tighter for a compact, solid feel.",
+      "Use IBM Plex Sans for all body copy to give an engineered, technical vibe.",
+      "Use Barlow Condensed (uppercase) for overlines, labels, and small CTAs with wide letter-spacing (tracking-widest).",
+      "No rounded, friendly fonts. Everything should feel measured and robust."
+    ]
+  },
+  "colors": {
+    "background": "#050505",
+    "surface": "#121212",
+    "surface_elevated": "#1C1C1C",
+    "primary": "#1E3A8A",
+    "primary_hover": "#172b66",
+    "accent": "#F97316",
+    "accent_hover": "#EA580C",
+    "text_primary": "#F3F4F6",
+    "text_secondary": "#9CA3AF",
+    "border": "rgba(255, 255, 255, 0.1)",
+    "rules": [
+      "Dark base (charcoal/black) is mandatory.",
+      "ORA Blue (#1E3A8A) for active states, foundational UI elements, and structural highlights.",
+      "ORA Orange (#F97316) for kinetic triggers: primary CTAs, alerts, and dynamic data points. Use sparingly to maintain impact.",
+      "Never use pure black without grain or subtle texture."
+    ]
+  },
+  "visual_enhancers": {
+    "shadows": [
+      "No soft or muddy drop shadows.",
+      "Use sharp 4px or 8px solid block shadows (e.g. shadow-[4px_4px_0_#F97316]) for interactive 'rugged' elements.",
+      "Otherwise, use flat, border-based design."
+    ],
+    "borders": [
+      "Implement the 'Grid Borders' style. 1px solid border-border on cards and containers to expose the 'skeleton' of the layout.",
+      "High-contrast 1px solid strokes instead of shadows."
+    ],
+    "textures": [
+      "Subtle noise overlay on the primary background to make it feel tactile, like asphalt or metal."
+    ],
+    "radius": "rounded-none to rounded-sm. Keep it blocky, functional, and industrial."
+  },
+  "component_guidelines": {
+    "buttons": "Square edges, high-contrast borders. Primary button should be ORA Orange with white text. Hover state must maintain at least 4.5:1 contrast. Use uppercase text.",
+    "cards": "Flat dark gray (#121212) backgrounds, 1px white/10 borders, no rounded corners. Grid-like layouts.",
+    "navigation": "Solid background (not transparent). Sticky top. Utilitarian layout.",
+    "forms": "Input fields should have sharp borders, dark backgrounds, and an ORA Blue focus ring.",
+    "icons": "Use Phosphor Icons (sharp/regular weight) for a technical and precise look."
+  },
+  "layouts": {
+    "general": "Responsive grid layout (12-column). Emphasize structural alignment.",
+    "spacing": "Generous spacing. Use p-8, p-12, or p-16 to give breathing room. Elements should not feel cramped.",
+    "hero": "Asymmetric bento grid or large high-contrast typography split-screen. Use images of PEI industries behind dark overlays.",
+    "solutions_bento": "Use Mode B: High Density Grid (from <Spacing and Layout Strategy>) for the Solutions and Products pages. Every pixel must be utilized with sharp borders dividing the items."
+  },
+  "motion": {
+    "interactions": "Micro-interactions should be fast and mechanical. No bouncy easing. Use linear or sharp ease-out curves.",
+    "page_transitions": "Fade and slight upward reveal. Staggered entrance for grid items.",
+    "hover_states": "Slight scale (1.02) or border color change. Must feel instantly responsive."
+  },
+  "accessibility": {
+    "contrast": "Ensure all text against dark backgrounds passes WCAG AA minimum 4.5:1.",
+    "focus": "All interactive elements must have a visible focus ring (ORA Blue or Orange).",
+    "motion": "Respect prefers-reduced-motion media query."
+  },
+  "media": {
+    "image_urls": [
+      {
+        "url": "https://customer-assets.emergentagent.com/job_72dff99e-f23b-417a-b072-6a778e2f977a/artifacts/bb8tv1rm_ChatGPT%20Image%20Mar%2014%2C%202026%2C%2005_02_29%20AM.png",
+        "category": "Brand",
+        "description": "ORA Brand Image - Forestry / Industry"
+      },
+      {
+        "url": "https://customer-assets.emergentagent.com/job_72dff99e-f23b-417a-b072-6a778e2f977a/artifacts/x1orriwj_ChatGPT%20Image%20Mar%2014%2C%202026%2C%2005_02_36%20AM.png",
+        "category": "Brand",
+        "description": "ORA Brand Image - Fleet / Systems"
+      },
+      {
+        "url": "https://customer-assets.emergentagent.com/job_72dff99e-f23b-417a-b072-6a778e2f977a/artifacts/49pvttd3_ChatGPT%20Image%20Mar%2014%2C%202026%2C%2005_02_41%20AM.png",
+        "category": "Brand",
+        "description": "ORA Brand Image - Agriculture / Fisheries"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1644519221874-8f2a91fe3e17?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzOTB8MHwxfHNlYXJjaHwxfHxzZW1pJTIwdHJ1Y2slMjBoaWdod2F5JTIwZmxlZXR8ZW58MHx8fHwxNzc0MjcwMDM4fDA&ixlib=rb-4.1.0&q=85",
+        "category": "Hero / Fleet",
+        "description": "Long line of semi trucks on highway - good for fleet operations context"
+      },
+      {
+        "url": "https://images.pexels.com/photos/193667/pexels-photo-193667.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "category": "Solutions / Fleet",
+        "description": "Semi truck traveling down a highway"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1679126625085-d999863b7f3f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzN8MHwxfHNlYXJjaHw0fHxmaXNoaW5nJTIwYm9hdCUyMG9jZWFuJTIwc3VucmlzZXxlbnwwfHx8fDE3NzQyNzAwMzN8MA&ixlib=rb-4.1.0&q=85",
+        "category": "Hero / Fisheries",
+        "description": "Large ships docked in water - PEI fisheries vibe"
+      },
+      {
+        "url": "https://images.pexels.com/photos/2131904/pexels-photo-2131904.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "category": "Solutions / Trades",
+        "description": "Fisherman on boat casting net during sunrise"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1721594489297-963f5e24abe1?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NDh8MHwxfHNlYXJjaHw0fHx0cmFjdG9yJTIwZmFybSUyMGZpZWxkJTIwYWdyaWN1bHR1cmV8ZW58MHx8fHwxNzc0MjcwMDMzfDA&ixlib=rb-4.1.0&q=85",
+        "category": "Solutions / Agriculture",
+        "description": "Aerial view of dirt road and fields - PEI potato farming representation"
+      }
+    ]
+  },
+  "instructions_to_main_agent": [
+    "Install and setup dependencies: framer-motion, lucide-react (or @phosphor-icons/react), react-router-dom.",
+    "Configure tailwind.config.js with the specified colors (ORA Blue #1E3A8A, ORA Orange #F97316, Dark Base #050505) and fonts (Chivo, IBM Plex Sans, Barlow Condensed).",
+    "Build standard React (.js) components, NO TypeScript.",
+    "Create the 5 main pages: Home, About, Solutions, Products, Contact. Set up routing.",
+    "Use Shadcn UI logic where applicable, but override styles entirely to match the rugged, border-heavy, non-rounded industrial look.",
+    "Implement the 'Grid Borders' style for data display and feature cards. Expose the structural layout.",
+    "Avoid using any transparency on surfaces that sit over scrolling text. Stick to opaque dark gray.",
+    "Hero section on Home page must feature an asymmetrical grid overlaying the background image or solid dark section.",
+    "Add 'data-testid' to all buttons, links, and forms."
+  ],
+  "universal_guidelines": [
+    "Create depth through layered design elements with z-index hierarchy, but keep borders stark.",
+    "DO NOT apply universal transition (e.g., transition: all). Add specific transitions.",
+    "DO NOT center align the entire app container (.App { text-align: center; } is banned).",
+    "DO NOT use emojis as icons. Use the specified icon library (Phosphor or Lucide).",
+    "Ensure generous padding in sections (py-20, py-32).",
+    "All interactive elements MUST have hover states (change background/text color).",
+    "Use the provided brand image URLs. Do NOT use placeholder text where an image is required."
+  ],
+  "3d_libraries": {
+    "recommendation": "Not strictly necessary for this rugged blue-collar site. Keep it lightweight. If background motion is desired, use Framer Motion for subtle grid-line tracing or CSS noise animations."
+  }
+}
