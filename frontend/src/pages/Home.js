@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { ArrowRight, Truck, Wrench, BarChart3, ShoppingCart, Utensils, Receipt, FileText } from 'lucide-react';
+import { ArrowRight, Truck, Wrench, BarChart3, ShoppingCart, Utensils, Receipt, FileText, Radio } from 'lucide-react';
 
 const Home = () => {
   const features = [
@@ -21,6 +21,13 @@ const Home = () => {
   ];
 
   const products = [
+    {
+      icon: Radio,
+      name: "Inform'Me",
+      tagline: 'by ORA',
+      description: 'Real-time communication and alert system for field operations.',
+      logo: 'https://customer-assets.emergentagent.com/job_ora-fleet-tech/artifacts/2ptazged_inform-me-2.png',
+    },
     {
       icon: ShoppingCart,
       name: 'SmartShop',
@@ -161,16 +168,24 @@ const Home = () => {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
             {products.map((product, index) => (
               <div
                 key={product.name}
                 className="ora-card bg-ora-dark border border-white/10 p-6 flex flex-col"
                 data-testid={`product-card-${index}`}
               >
-                <div className="w-12 h-12 bg-ora-orange/10 border border-ora-orange/30 flex items-center justify-center mb-4">
-                  <product.icon className="w-6 h-6 text-ora-orange" />
-                </div>
+                {product.logo ? (
+                  <img 
+                    src={product.logo} 
+                    alt={product.name}
+                    className="w-12 h-12 object-contain mb-4"
+                  />
+                ) : (
+                  <div className="w-12 h-12 bg-ora-orange/10 border border-ora-orange/30 flex items-center justify-center mb-4">
+                    <product.icon className="w-6 h-6 text-ora-orange" />
+                  </div>
+                )}
                 <h3 className="font-chivo font-bold text-white text-lg">
                   {product.name}
                   <span className="font-barlow text-ora-blue text-xs uppercase tracking-widest ml-2">{product.tagline}</span>

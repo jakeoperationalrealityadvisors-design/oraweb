@@ -12,6 +12,7 @@ const Footer = () => {
       { name: 'Contact', path: '/contact' },
     ],
     products: [
+      { name: "Inform'Me", path: '/products#informme' },
       { name: 'SmartShop', path: '/products#smartshop' },
       { name: 'SmartMeal', path: '/products#smartmeal' },
       { name: 'ExpendMe', path: '/products#expendme' },

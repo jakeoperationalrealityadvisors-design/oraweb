@@ -1,11 +1,30 @@
 import { useState } from 'react';
-import { ShoppingCart, Utensils, Receipt, FileText, ArrowRight, X, CheckCircle } from 'lucide-react';
+import { ShoppingCart, Utensils, Receipt, FileText, Radio, ArrowRight, X, CheckCircle } from 'lucide-react';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from '../components/ui/dialog';
 
 const Products = () => {
   const [selectedProduct, setSelectedProduct] = useState(null);
 
   const products = [
+    {
+      id: 'informme',
+      icon: Radio,
+      name: "Inform'Me",
+      tagline: 'by ORA',
+      shortDescription: 'Real-time communication and alert system for field operations.',
+      fullDescription: "Inform'Me keeps your entire operation connected with instant alerts, updates, and communications. From field to office, everyone stays informed in real-time.",
+      keyBenefit: 'Keep everyone in the loop, instantly.',
+      features: [
+        'Real-time alerts and notifications',
+        'Field-to-office communication',
+        'Emergency broadcast system',
+        'Team messaging',
+        'Status updates and check-ins',
+      ],
+      status: 'coming-soon',
+      color: 'ora-blue',
+      logo: 'https://customer-assets.emergentagent.com/job_ora-fleet-tech/artifacts/2ptazged_inform-me-2.png',
+    },
     {
       id: 'smartshop',
       icon: ShoppingCart,
@@ -112,18 +131,26 @@ const Products = () => {
                 data-testid={`product-detail-${product.id}`}
               >
                 <div className="flex items-start justify-between mb-6">
-                  <div 
-                    className="w-16 h-16 flex items-center justify-center"
-                    style={{
-                      backgroundColor: product.color === 'ora-blue' ? 'rgba(30, 58, 138, 0.1)' : 'rgba(249, 115, 22, 0.1)',
-                      border: `1px solid ${product.color === 'ora-blue' ? 'rgba(30, 58, 138, 0.3)' : 'rgba(249, 115, 22, 0.3)'}`
-                    }}
-                  >
-                    <product.icon 
-                      className="w-8 h-8" 
-                      style={{ color: product.color === 'ora-blue' ? '#1E3A8A' : '#F97316' }}
+                  {product.logo ? (
+                    <img 
+                      src={product.logo} 
+                      alt={product.name}
+                      className="w-16 h-16 object-contain"
                     />
-                  </div>
+                  ) : (
+                    <div 
+                      className="w-16 h-16 flex items-center justify-center"
+                      style={{
+                        backgroundColor: product.color === 'ora-blue' ? 'rgba(30, 58, 138, 0.1)' : 'rgba(249, 115, 22, 0.1)',
+                        border: `1px solid ${product.color === 'ora-blue' ? 'rgba(30, 58, 138, 0.3)' : 'rgba(249, 115, 22, 0.3)'}`
+                      }}
+                    >
+                      <product.icon 
+                        className="w-8 h-8" 
+                        style={{ color: product.color === 'ora-blue' ? '#1E3A8A' : '#F97316' }}
+                      />
+                    </div>
+                  )}
                   <span 
                     className="font-barlow text-xs uppercase tracking-widest px-3 py-1 border"
                     style={{
@@ -177,18 +204,26 @@ const Products = () => {
               <DialogHeader className="p-6 pb-0">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-4">
-                    <div 
-                      className="w-12 h-12 flex items-center justify-center"
-                      style={{
-                        backgroundColor: selectedProduct.color === 'ora-blue' ? 'rgba(30, 58, 138, 0.1)' : 'rgba(249, 115, 22, 0.1)',
-                        border: `1px solid ${selectedProduct.color === 'ora-blue' ? 'rgba(30, 58, 138, 0.3)' : 'rgba(249, 115, 22, 0.3)'}`
-                      }}
-                    >
-                      <selectedProduct.icon 
-                        className="w-6 h-6" 
-                        style={{ color: selectedProduct.color === 'ora-blue' ? '#1E3A8A' : '#F97316' }}
+                    {selectedProduct.logo ? (
+                      <img 
+                        src={selectedProduct.logo} 
+                        alt={selectedProduct.name}
+                        className="w-12 h-12 object-contain"
                       />
-                    </div>
+                    ) : (
+                      <div 
+                        className="w-12 h-12 flex items-center justify-center"
+                        style={{
+                          backgroundColor: selectedProduct.color === 'ora-blue' ? 'rgba(30, 58, 138, 0.1)' : 'rgba(249, 115, 22, 0.1)',
+                          border: `1px solid ${selectedProduct.color === 'ora-blue' ? 'rgba(30, 58, 138, 0.3)' : 'rgba(249, 115, 22, 0.3)'}`
+                        }}
+                      >
+                        <selectedProduct.icon 
+                          className="w-6 h-6" 
+                          style={{ color: selectedProduct.color === 'ora-blue' ? '#1E3A8A' : '#F97316' }}
+                        />
+                      </div>
+                    )}
                     <div>
                       <DialogTitle className="font-chivo font-bold text-white text-xl">
                         {selectedProduct.name}
