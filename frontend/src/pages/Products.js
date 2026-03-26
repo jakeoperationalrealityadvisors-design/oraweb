@@ -38,9 +38,8 @@ const Products = () => {
         'Optimized shopping routes',
         'AI-assisted input',
       ],
-      status: 'live',
+      status: 'launching',
       color: 'ora-orange',
-      link: 'https://smartshopbyora.vercel.app', // 🔥 UPDATE THIS WHEN READY
     },
 
     {
@@ -128,22 +127,20 @@ const Products = () => {
                 <span className="text-ora-orange">Key Benefit:</span> {product.keyBenefit}
               </p>
 
-              {/* 🔥 CONDITIONAL CTA */}
-              {product.status === 'live' ? (
-                <a
-                  href={product.link}
-                  className="inline-flex items-center gap-2 bg-ora-orange px-6 py-3 text-white uppercase text-sm"
-                >
-                  Open App <ArrowRight size={16} />
-                </a>
-              ) : (
-                <button
-                  onClick={() => setSelectedProduct(product)}
-                  className="inline-flex items-center gap-2 border border-white/20 px-6 py-3 text-white uppercase text-sm"
-                >
-                  View Details <ArrowRight size={16} />
-                </button>
+              {/* 🔥 LAUNCH TAG */}
+              {product.status === 'launching' && (
+                <p className="text-xs text-ora-orange mb-3 uppercase tracking-wider">
+                  Launching This Week
+                </p>
               )}
+
+              {/* CTA */}
+              <button
+                onClick={() => setSelectedProduct(product)}
+                className="inline-flex items-center gap-2 border border-white/20 px-6 py-3 text-white uppercase text-sm"
+              >
+                Preview App <ArrowRight size={16} />
+              </button>
 
             </div>
           ))}
@@ -166,7 +163,7 @@ const Products = () => {
                 {selectedProduct.fullDescription}
               </DialogDescription>
 
-              <ul className="space-y-2">
+              <ul className="space-y-2 mb-6">
                 {selectedProduct.features.map((f, i) => (
                   <li key={i} className="flex gap-2">
                     <CheckCircle className="text-ora-orange w-4 h-4" />
@@ -174,10 +171,36 @@ const Products = () => {
                   </li>
                 ))}
               </ul>
+
+              {/* 🔥 SMARTSHOP LAUNCH MESSAGE */}
+              {selectedProduct.id === 'smartshop' && (
+                <p className="text-gray-400 text-sm text-center">
+                  SmartShop is launching this week. Check back soon — it’s almost ready.
+                </p>
+              )}
+
             </>
           )}
         </DialogContent>
       </Dialog>
+
+      {/* CTA */}
+      <section className="py-20 text-center bg-ora-dark">
+        <h2 className="text-white text-3xl font-bold mb-6">
+          Want Early Access?
+        </h2>
+
+        <p className="text-gray-400 mb-8">
+          SmartShop is launching this week. Stay tuned.
+        </p>
+
+        <a
+          href="/contact"
+          className="bg-ora-orange px-8 py-4 text-white font-semibold uppercase tracking-wider"
+        >
+          Get Notified
+        </a>
+      </section>
 
     </div>
   );
