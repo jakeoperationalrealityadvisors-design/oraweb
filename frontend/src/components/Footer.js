@@ -25,14 +25,12 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {/* Brand Column */}
           <div className="lg:col-span-1">
-            <Link to="/" className="flex items-center gap-3 mb-4" data-testid="footer-logo">
-              <div className="w-10 h-10 rounded-sm bg-ora-blue flex items-center justify-center">
-                <span className="font-chivo font-bold text-white text-lg">O</span>
-              </div>
-              <div>
-                <span className="font-chivo font-bold text-white text-lg tracking-tight">ORA</span>
-                <span className="font-barlow text-ora-orange text-xs block -mt-1 tracking-widest uppercase">Developments PEI</span>
-              </div>
+            <Link to="/" className="inline-block mb-4" data-testid="footer-logo">
+              <img 
+                src="https://customer-assets.emergentagent.com/job_ora-fleet-tech/artifacts/0b2xb79n_ChatGPT%20Image%20Mar%2014%2C%202026%2C%2005_03_11%20AM.jpg"
+                alt="ORA Developments PEI"
+                className="h-16 w-auto"
+              />
             </Link>
             <p className="font-ibm text-gray-400 text-sm leading-relaxed mb-6">
               Built by Operators. Designed for the Real World. Tools for fleets, trades, and real operations.

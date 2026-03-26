@@ -26,16 +26,14 @@ const Navbar = () => {
           {/* Logo */}
           <Link 
             to="/" 
-            className="flex items-center gap-3"
+            className="flex items-center"
             data-testid="navbar-logo"
           >
-            <div className="w-10 h-10 lg:w-12 lg:h-12 rounded-sm bg-ora-blue flex items-center justify-center">
-              <span className="font-chivo font-bold text-white text-lg lg:text-xl">O</span>
-            </div>
-            <div className="hidden sm:block">
-              <span className="font-chivo font-bold text-white text-lg lg:text-xl tracking-tight">ORA</span>
-              <span className="font-barlow text-ora-orange text-xs lg:text-sm block -mt-1 tracking-widest uppercase">Developments PEI</span>
-            </div>
+            <img 
+              src="https://customer-assets.emergentagent.com/job_ora-fleet-tech/artifacts/0b2xb79n_ChatGPT%20Image%20Mar%2014%2C%202026%2C%2005_03_11%20AM.jpg"
+              alt="ORA Developments PEI"
+              className="h-12 lg:h-14 w-auto"
+            />
           </Link>
 
           {/* Desktop Navigation */}
