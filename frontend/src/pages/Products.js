@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ShoppingCart, Utensils, Receipt, FileText, Radio, ArrowRight, X, CheckCircle } from 'lucide-react';
+import { ShoppingCart, Utensils, Receipt, FileText, Radio, ArrowRight, CheckCircle } from 'lucide-react';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from '../components/ui/dialog';
 
 const Products = () => {
@@ -10,89 +10,84 @@ const Products = () => {
       id: 'informme',
       icon: Radio,
       name: "Inform'Me",
-      tagline: 'by ORA',
-      shortDescription: 'Real-time communication and alert system for field operations.',
-      fullDescription: "Inform'Me keeps your entire operation connected with instant alerts, updates, and communications. From field to office, everyone stays informed in real-time.",
+      tagline: 'Platform',
+      shortDescription: 'Real-time communication between field crews and the office.',
+      fullDescription: "Inform'Me keeps your entire operation connected with instant alerts, updates, and communication.",
       keyBenefit: 'Keep everyone in the loop, instantly.',
       features: [
-        'Real-time alerts and notifications',
-        'Field-to-office communication',
-        'Emergency broadcast system',
-        'Team messaging',
-        'Status updates and check-ins',
+        'Real-time alerts',
+        'Field-to-office messaging',
+        'Team communication',
+        'Status updates',
       ],
       status: 'coming-soon',
       color: 'ora-blue',
-      logo: 'https://customer-assets.emergentagent.com/job_ora-fleet-tech/artifacts/2ptazged_inform-me-2.png',
     },
+
     {
       id: 'smartshop',
       icon: ShoppingCart,
       name: 'SmartShop',
-      tagline: 'by ORA',
-      shortDescription: 'Inventory and procurement management for trades and operations.',
-      fullDescription: 'SmartShop streamlines your inventory management and procurement processes. Track stock levels, automate reordering, and manage suppliers—all from one dashboard designed for trades and operations.',
-      keyBenefit: 'Never run out of critical supplies again.',
+      tagline: 'System',
+      shortDescription: 'Smarter shopping, pricing insights, and optimized lists.',
+      fullDescription: 'SmartShop helps you build lists, compare prices, and optimize your shopping to save time and money.',
+      keyBenefit: 'Spend less. Shop smarter.',
       features: [
-        'Real-time inventory tracking',
-        'Automated reorder alerts',
-        'Supplier management',
-        'Purchase order generation',
-        'Cost analysis and reporting',
+        'Smart list building',
+        'Price comparison',
+        'Optimized shopping routes',
+        'AI-assisted input',
       ],
-      status: 'coming-soon',
+      status: 'live',
       color: 'ora-orange',
+      link: 'https://smartshopbyora.vercel.app', // 🔥 UPDATE THIS WHEN READY
     },
+
     {
       id: 'smartmeal',
       icon: Utensils,
       name: 'SmartMeal',
-      tagline: 'by ORA',
-      shortDescription: 'Meal planning and crew catering coordination made simple.',
-      fullDescription: 'SmartMeal takes the hassle out of feeding your crew. Plan meals, track nutrition, coordinate catering, and manage dietary requirements—all in one place built for operations that feed teams.',
-      keyBenefit: 'Feed your crew better without the headaches.',
+      tagline: 'System',
+      shortDescription: 'Meal planning and crew coordination made simple.',
+      fullDescription: 'SmartMeal simplifies meal planning and feeding crews in real-world environments.',
+      keyBenefit: 'Feed your crew without the hassle.',
       features: [
-        'Weekly meal planning',
-        'Nutrition tracking',
-        'Crew dietary management',
-        'Catering coordination',
-        'Budget tracking',
+        'Meal planning',
+        'Crew coordination',
+        'Shopping integration',
       ],
       status: 'coming-soon',
       color: 'ora-blue',
     },
+
     {
       id: 'expendme',
       icon: Receipt,
       name: 'ExpendMe',
-      tagline: 'by ORA',
-      shortDescription: 'Expense tracking and reporting for field teams and fleets.',
-      fullDescription: 'ExpendMe makes expense tracking painless for field crews and fleet operators. Snap receipts, categorize expenses, and generate reports—no more shoebox accounting.',
-      keyBenefit: 'Track every dollar without the paperwork pile.',
+      tagline: 'Tool',
+      shortDescription: 'Track expenses, materials, and spending.',
+      fullDescription: 'ExpendMe makes expense tracking simple and fast for field teams.',
+      keyBenefit: 'Track every dollar easily.',
       features: [
-        'Receipt scanning',
-        'Auto-categorization',
-        'Mileage tracking',
+        'Receipt tracking',
         'Expense reports',
-        'Team expense management',
+        'Job-based tracking',
       ],
       status: 'coming-soon',
       color: 'ora-orange',
     },
+
     {
       id: 'resumate',
       icon: FileText,
       name: 'ResuMate',
       tagline: 'PEI',
-      shortDescription: 'Professional resume building for blue-collar workers in PEI.',
-      fullDescription: 'ResuMate PEI helps tradespeople and operators create professional resumes that highlight practical skills and hands-on experience. Built specifically for the blue-collar workforce.',
-      keyBenefit: 'Land your next job with a resume that shows what you can do.',
+      shortDescription: 'Resume building for real-world workers.',
+      fullDescription: 'ResuMate helps workers build resumes that reflect real skills.',
+      keyBenefit: 'Show what you can actually do.',
       features: [
+        'Simple builder',
         'Trade-focused templates',
-        'Skills highlighting',
-        'Certification tracking',
-        'Easy formatting',
-        'PEI job market optimized',
       ],
       status: 'coming-soon',
       color: 'ora-blue',
@@ -100,196 +95,90 @@ const Products = () => {
   ];
 
   return (
-    <div data-testid="products-page">
-      {/* Hero Section */}
-      <section className="relative py-20 lg:py-32 bg-ora-dark" data-testid="products-hero">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl">
-            <span className="font-barlow font-semibold text-ora-orange uppercase tracking-widest text-sm mb-4 block">
-              Our Products
-            </span>
-            <h1 className="font-chivo font-bold text-white text-4xl sm:text-5xl lg:text-6xl tracking-tight leading-tight mb-6">
-              Apps That Work<br />
-              <span className="text-ora-orange">As Hard As You Do</span>
-            </h1>
-            <p className="font-ibm text-gray-300 text-lg lg:text-xl leading-relaxed">
-              Practical tools built by operators, for operators. No bloat, no fluff—just features that make your day easier.
-            </p>
-          </div>
+    <div>
+
+      {/* HERO */}
+      <section className="py-20 bg-ora-dark">
+        <div className="max-w-5xl mx-auto px-6">
+          <h1 className="text-white text-5xl font-bold mb-6">
+            Apps That Work<br />
+            <span className="text-ora-orange">As Hard As You Do</span>
+          </h1>
+          <p className="text-gray-400 text-lg">
+            Built from real-world operations. Designed to be used — not just sold.
+          </p>
         </div>
       </section>
 
-      {/* Products Grid */}
-      <section className="py-20 lg:py-32 bg-ora-surface grid-accent" data-testid="products-grid">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
-            {products.map((product, index) => (
-              <div
-                key={product.id}
-                id={product.id}
-                className="ora-card bg-ora-dark border border-white/10 p-8 lg:p-10 flex flex-col"
-                data-testid={`product-detail-${product.id}`}
-              >
-                <div className="flex items-start justify-between mb-6">
-                  {product.logo ? (
-                    <img 
-                      src={product.logo} 
-                      alt={product.name}
-                      className="w-16 h-16 object-contain"
-                    />
-                  ) : (
-                    <div 
-                      className="w-16 h-16 flex items-center justify-center"
-                      style={{
-                        backgroundColor: product.color === 'ora-blue' ? 'rgba(30, 58, 138, 0.1)' : 'rgba(249, 115, 22, 0.1)',
-                        border: `1px solid ${product.color === 'ora-blue' ? 'rgba(30, 58, 138, 0.3)' : 'rgba(249, 115, 22, 0.3)'}`
-                      }}
-                    >
-                      <product.icon 
-                        className="w-8 h-8" 
-                        style={{ color: product.color === 'ora-blue' ? '#1E3A8A' : '#F97316' }}
-                      />
-                    </div>
-                  )}
-                  <span 
-                    className="font-barlow text-xs uppercase tracking-widest px-3 py-1 border"
-                    style={{
-                      color: product.color === 'ora-blue' ? '#1E3A8A' : '#F97316',
-                      borderColor: product.color === 'ora-blue' ? 'rgba(30, 58, 138, 0.3)' : 'rgba(249, 115, 22, 0.3)'
-                    }}
-                  >
-                    Coming Soon
-                  </span>
-                </div>
+      {/* PRODUCTS */}
+      <section className="py-20 bg-ora-surface">
+        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-8">
 
-                <h3 className="font-chivo font-bold text-white text-2xl lg:text-3xl mb-1">
-                  {product.name}
-                  <span 
-                    className="font-barlow text-sm uppercase tracking-widest ml-2"
-                    style={{ color: product.color === 'ora-blue' ? '#1E3A8A' : '#F97316' }}
-                  >
-                    {product.tagline}
-                  </span>
-                </h3>
+          {products.map((product) => (
+            <div key={product.id} className="bg-ora-dark border border-white/10 p-8">
 
-                <p className="font-ibm text-gray-400 mt-3 mb-4 flex-1">
-                  {product.shortDescription}
-                </p>
+              <h3 className="text-white text-2xl font-bold mb-2">
+                {product.name}
+                <span className="text-sm text-ora-orange ml-2 uppercase">{product.tagline}</span>
+              </h3>
 
-                <div className="bg-ora-surface/50 border border-white/5 p-4 mb-6">
-                  <p className="font-ibm text-white text-sm">
-                    <span className="text-ora-orange font-semibold">Key Benefit:</span> {product.keyBenefit}
-                  </p>
-                </div>
+              <p className="text-gray-400 mb-4">{product.shortDescription}</p>
 
+              <p className="text-sm text-white mb-4">
+                <span className="text-ora-orange">Key Benefit:</span> {product.keyBenefit}
+              </p>
+
+              {/* 🔥 CONDITIONAL CTA */}
+              {product.status === 'live' ? (
+                <a
+                  href={product.link}
+                  className="inline-flex items-center gap-2 bg-ora-orange px-6 py-3 text-white uppercase text-sm"
+                >
+                  Open App <ArrowRight size={16} />
+                </a>
+              ) : (
                 <button
                   onClick={() => setSelectedProduct(product)}
-                  className="ora-btn-primary inline-flex items-center justify-center gap-2 text-white font-barlow font-semibold uppercase tracking-wider px-6 py-3 text-sm w-full"
-                  style={{ backgroundColor: product.color === 'ora-blue' ? '#1E3A8A' : '#F97316' }}
-                  data-testid={`product-cta-${product.id}`}
+                  className="inline-flex items-center gap-2 border border-white/20 px-6 py-3 text-white uppercase text-sm"
                 >
                   View Details <ArrowRight size={16} />
                 </button>
-              </div>
-            ))}
-          </div>
+              )}
+
+            </div>
+          ))}
+
         </div>
       </section>
 
-      {/* Product Detail Modal */}
+      {/* MODAL */}
       <Dialog open={!!selectedProduct} onOpenChange={() => setSelectedProduct(null)}>
-        <DialogContent className="bg-ora-dark border border-white/10 max-w-lg p-0">
+        <DialogContent className="bg-ora-dark border border-white/10">
           {selectedProduct && (
             <>
-              <DialogHeader className="p-6 pb-0">
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-4">
-                    {selectedProduct.logo ? (
-                      <img 
-                        src={selectedProduct.logo} 
-                        alt={selectedProduct.name}
-                        className="w-12 h-12 object-contain"
-                      />
-                    ) : (
-                      <div 
-                        className="w-12 h-12 flex items-center justify-center"
-                        style={{
-                          backgroundColor: selectedProduct.color === 'ora-blue' ? 'rgba(30, 58, 138, 0.1)' : 'rgba(249, 115, 22, 0.1)',
-                          border: `1px solid ${selectedProduct.color === 'ora-blue' ? 'rgba(30, 58, 138, 0.3)' : 'rgba(249, 115, 22, 0.3)'}`
-                        }}
-                      >
-                        <selectedProduct.icon 
-                          className="w-6 h-6" 
-                          style={{ color: selectedProduct.color === 'ora-blue' ? '#1E3A8A' : '#F97316' }}
-                        />
-                      </div>
-                    )}
-                    <div>
-                      <DialogTitle className="font-chivo font-bold text-white text-xl">
-                        {selectedProduct.name}
-                        <span 
-                          className="font-barlow text-xs uppercase tracking-widest ml-2"
-                          style={{ color: selectedProduct.color === 'ora-blue' ? '#1E3A8A' : '#F97316' }}
-                        >
-                          {selectedProduct.tagline}
-                        </span>
-                      </DialogTitle>
-                    </div>
-                  </div>
-                </div>
+              <DialogHeader>
+                <DialogTitle className="text-white text-xl">
+                  {selectedProduct.name}
+                </DialogTitle>
               </DialogHeader>
-              <div className="p-6">
-                <DialogDescription className="font-ibm text-gray-300 mb-6">
-                  {selectedProduct.fullDescription}
-                </DialogDescription>
 
-                <h4 className="font-barlow font-semibold text-white uppercase tracking-widest text-sm mb-4">
-                  Features
-                </h4>
-                <ul className="space-y-3 mb-6">
-                  {selectedProduct.features.map((feature, index) => (
-                    <li key={index} className="flex items-center gap-3">
-                      <CheckCircle 
-                        className="w-5 h-5 flex-shrink-0" 
-                        style={{ color: selectedProduct.color === 'ora-blue' ? '#1E3A8A' : '#F97316' }}
-                      />
-                      <span className="font-ibm text-gray-300 text-sm">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
+              <DialogDescription className="text-gray-300 mb-4">
+                {selectedProduct.fullDescription}
+              </DialogDescription>
 
-                <div className="bg-ora-surface border border-white/10 p-4 text-center">
-                  <p className="font-barlow font-semibold text-ora-orange uppercase tracking-widest text-sm mb-2">
-                    Coming Soon
-                  </p>
-                  <p className="font-ibm text-gray-400 text-sm">
-                    We&apos;re putting the finishing touches on {selectedProduct.name}. Stay tuned!
-                  </p>
-                </div>
-              </div>
+              <ul className="space-y-2">
+                {selectedProduct.features.map((f, i) => (
+                  <li key={i} className="flex gap-2">
+                    <CheckCircle className="text-ora-orange w-4 h-4" />
+                    <span className="text-gray-400">{f}</span>
+                  </li>
+                ))}
+              </ul>
             </>
           )}
         </DialogContent>
       </Dialog>
 
-      {/* CTA Section */}
-      <section className="py-20 lg:py-32 bg-ora-dark border-t border-white/10" data-testid="products-cta">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="font-chivo font-bold text-white text-3xl sm:text-4xl tracking-tight mb-6">
-            Want Early Access?
-          </h2>
-          <p className="font-ibm text-gray-400 text-lg mb-8">
-            Be the first to know when our products launch. Reach out and we&apos;ll add you to the list.
-          </p>
-          <a
-            href="/contact"
-            className="ora-btn-primary inline-flex items-center justify-center gap-2 bg-ora-orange hover:bg-ora-orange-hover text-white font-barlow font-semibold uppercase tracking-wider px-10 py-4 text-sm"
-            data-testid="products-early-access-cta"
-          >
-            Get Notified <ArrowRight size={18} />
-          </a>
-        </div>
-      </section>
     </div>
   );
 };
